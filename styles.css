@@ -14,14 +14,24 @@ body{
   border-left: 3px solid green;
   height: 50px;
   z-index: 20;
+  
+}
+
+.line{
+  border-left: 3px solid green;
+  height: 50px;
 }
 
 .authentication{
   
   background-color: red;
   display: inline-block;
+  margin-left: 20px;
 }
 
+.btn{
+  margin-right: 10px;
+}
 /* Style the header with a grey background and some padding */
 .header {
     box-sizing: border-box;
@@ -46,6 +56,7 @@ body{
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
+    margin-right: 20px;
   }
   
   /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
