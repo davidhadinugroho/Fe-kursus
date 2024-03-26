@@ -7,16 +7,30 @@ body{
   font-family: krub;
 }
 
+.separator-line{
+  
+  position: fixed;
+  display: inline-block;
+  border-left: 3px solid green;
+  height: 50px;
+  z-index: 20;
+}
+
+.authentication{
+  
+  background-color: red;
+  display: inline-block;
+}
 
 /* Style the header with a grey background and some padding */
 .header {
-  box-sizing: border-box;
+    box-sizing: border-box;
     overflow: hidden;
     background-color: transparent;
     padding-right: 20px;
     position: fixed;
     top: 0;
-    z-index: 90;
+    z-index: 1;
     min-width: 100vw;
     
     
