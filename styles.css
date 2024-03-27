@@ -119,6 +119,9 @@ body{
   border-color: #24C824;
 }
 
+.btn{
+  margin-right: 10px;
+}
 /* Style the header with a grey background and some padding */
 .header {
     box-sizing: border-box;
