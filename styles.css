@@ -54,7 +54,13 @@ table {
 
 @font-face {
   font-family: krub-bold;
-  src: url(Krub/Krub-SemiBold.ttf);
+  src: url(Krub/Krub-Medium.ttf);
+}
+
+:root {
+  --grid: 3;
+  --grid-end: 4;
+  --green: #24C824
 }
 
 body{
@@ -63,13 +69,56 @@ body{
   
 }
 
+h1 {
+  font-family: krub-bold;
+  font-size: 2em; /* 40px/16=2.5em */
+  padding: 10px 0px;
+}
+
+h2 {
+  font-family: krub-bold;
+  font-size: 1.25em; /* 30px/16=1.875em */
+  padding: 10px 0px;
+
+}
+
+p {
+  padding: 10px;
+}
+
+.passive-text{
+  color: #918E8E;
+
+}
+
+.search-container{
+  background-color: aquamarine;
+}
+
 .search-bar{
   padding: 10px;
   border-radius: 7px;
   border: none;
+  
 }
 
+.search-container .btn{
+  padding: 12px;   
+}
 
+.hero .search-bar{
+
+  width: 60vw;
+  height: 30px;
+}
+
+.service-container{
+  width: fit-content;
+  padding: 10px;
+  margin: 20px auto;
+  background-color: red;
+  
+}
 
 
 .hero{
@@ -104,24 +153,30 @@ body{
   text-decoration: none;
   line-height: 25px;
   border-radius: 7px;
-
-
+  cursor: pointer; 
 }
 
 .btn-white{
-  color: #24C824 !important;
+  color: var(--green) !important;
   background-color: white;
-  border-color: #24C824;
+  border-color: var(--green) ;
 }
 
 .btn-green{
   color: white !important;
-  background-color: #24C824;
-  border-color: #24C824;
+  background-color: var(--green);
+  border-color: var(--green);
 }
 
-.btn{
-  margin-right: 10px;
+.btn-round{
+  
+  border-radius: 50%;
+  border: solid 7px rgba(255, 255, 255, 0.25);;
+
+}
+
+.service-container .btn-round{
+margin: 0 15px;
 }
 /* Style the header with a grey background and some padding */
 .header {
@@ -167,7 +222,7 @@ body{
   .header a.active {
     font-weight: bold;
     /* background-color: dodgerblue; */
-    color: #24C824;
+    color: var(--green);
   }
   
   /* Float the link section to the right */
@@ -175,33 +230,65 @@ body{
     float: right;
   }
   
-  .search-container .btn{
-    padding: 12px;   
-  }
   
-  .hero .search-bar{
-    width: 785px;
-    height: 30px;
-  }
-
+  
   .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    /* Card dimensions and style */
+    overflow: hidden;
+    border-radius: 5px;
+    width: 250px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
   
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  .card img {
+    /* Image styling */
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Scales image to fit within the container */
   }
   
-  /* Add some padding inside the card container */
+  .card h2 {
+    /* Title styling */
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .card p {
+    /* Description styling */
+    padding: 5px 10px;
+    margin: 0;
+  }
+  
+  .card .price{
+    padding-top: 20px;
+    margin-bottom: 10px;
+  }
+  
   .card-container {
-    padding: 2px 16px;
+    display: grid;
+    grid-template-columns: repeat(var(--grid), 0.2fr); /* Three columns */
+  gap: 10px;
+  /* background-color: #2196F3; */
+    margin: 0 auto;
+    /* overflow: hidden; */
+    justify-content: center;
+  }
+.recom-title{
+  /* background-color: aqua; */
+  grid-column-start: 1;
+  grid-column-end: var(--grid-end);
+}
+  .recom-container{
+    
+    /* background-color: var(--green); */
+    width: 75%;
+    margin: 50px auto;
   }
   
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-  @media screen and (max-width: 500px) {
+   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+   @media screen and (max-width: 500px) {
     .header a {
       float: none;
       display: block;
