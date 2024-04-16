@@ -69,6 +69,10 @@ body{
   
 }
 
+.hide{
+  display: none;
+}
+
 h1 {
   font-family: krub-bold;
   font-size: 2em; /* 40px/16=2.5em */
@@ -82,17 +86,27 @@ h2 {
 
 }
 
+
 p {
-  padding: 10px;
+  line-height: 1.5;
+  
 }
 
+.detail-container p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.bold{
+  font-family: krub-bold;
+}
 .passive-text{
   color: #918E8E;
 
 }
 
 .search-container{
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 .search-bar{
@@ -116,7 +130,7 @@ p {
   width: fit-content;
   padding: 10px;
   margin: 20px auto;
-  background-color: red;
+  /* background-color: red; */
   
 }
 
@@ -169,7 +183,7 @@ p {
 }
 
 .btn-round{
-  
+
   border-radius: 50%;
   border: solid 7px rgba(255, 255, 255, 0.25);;
 
@@ -284,9 +298,72 @@ margin: 0 15px;
     
     /* background-color: var(--green); */
     width: 75%;
-    margin: 50px auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 175px;
   }
   
+  .detail-span{
+    margin-left: 10px;
+  }
+
+
+  .detail-container{
+    padding-top: 75px;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .detail-container img{
+    padding: 10px;
+    margin: 20px auto;
+    width: 50%;
+  }
+  .detail-desc{
+    padding-bottom: 50px;
+  }
+
+  .detail-container > .card{
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .card .list{
+    padding: 20px;
+    margin: 15px auto;
+    width: 90%;
+  }
+
+
+  .card .list .btn{
+    float: right;
+    
+  }
+  .record-container{
+    margin-top: 100px;
+    width: 60%;
+  }
+  .record{
+    width: 500px;
+  }
+
+  .pagination{
+    margin: 20px;
+    
+  }
+  .table-indicator{
+    font-size: medium;
+    padding-top: 7px;
+  }
+
+  .table-indicator .active{
+  color: var(--green);
+  }
+
+  .pagination .active{
+    color: var(--green);
+    }
    /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
    @media screen and (max-width: 500px) {
     .header a {
