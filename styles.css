@@ -181,7 +181,11 @@ p {
   background-color: var(--green);
   border-color: var(--green);
 }
-
+.btn-light-green{
+  color: white !important;
+  background-color: var(--green);
+  border-color: var(--green);
+}
 .btn-round{
 
   border-radius: 50%;
@@ -368,6 +372,23 @@ margin: 0 15px;
     .detail-wrapper{
       display: flex;
       
+    }
+.course{
+  padding-top: 50px;
+}
+    .course .search-container{
+      grid-column-start: 1;
+      grid-column-end: var(--grid-end);
+    }
+
+    .course .search-bar{
+      width: 85%;
+      border: solid 2px grey;
+      padding: 13px;
+    }
+
+    .small-text{
+      font-size: medium;
     }
    /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
    @media screen and (max-width: 500px) {
