@@ -58,9 +58,10 @@ table {
 }
 
 :root {
-  --grid: 3;
-  --grid-end: 4;
-  --green: #24C824
+  --grid: 5;
+  --grid-end: 10;
+  --green: #24C824;
+  --lightgreen: #24c82433;
 }
 
 body{
@@ -182,8 +183,8 @@ p {
   border-color: var(--green);
 }
 .btn-light-green{
-  color: white !important;
-  background-color: var(--green);
+  color: var(--green) !important;
+  background-color: var(--lightgreen);
   border-color: var(--green);
 }
 .btn-round{
@@ -293,6 +294,13 @@ margin: 0 15px;
     /* overflow: hidden; */
     justify-content: center;
   }
+
+  .recom-wrapper{
+    margin: auto;
+    background-color: aqua;
+    width: 60%; 
+    overflow: scroll;
+  }
 .recom-title{
   /* background-color: aqua; */
   grid-column-start: 1;
@@ -389,6 +397,15 @@ margin: 0 15px;
 
     .small-text{
       font-size: medium;
+    }
+
+
+    .recom-container .btn {
+      padding: 10px 0;
+      width: 250px;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      margin: auto;
     }
    /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
    @media screen and (max-width: 500px) {
